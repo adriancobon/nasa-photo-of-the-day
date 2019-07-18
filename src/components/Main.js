@@ -1,15 +1,17 @@
 import React from "react";
+import Media from "./Media.js";
+import { Container } from 'semantic-ui-react';
 
 
 const Main = (props) => {
     return (
       <main>
-        <div className="video-container">
-            <iframe className="media" width="420" height="315"
-                src={props.url}>
-            </iframe>
-        </div>
-        <p>{props.explanation}</p>
+        <Container>
+            <Media key="1026" url={props.url} mediaType={props.mediaType}/>
+            <Container text>
+              <p>{props.explanation}</p>
+            </Container>
+        </Container>
       </main>
     );
   };
